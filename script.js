@@ -1,17 +1,17 @@
-var celsiusInput = document.getElementById("celsius");
-var showFahrenheitButton = document.getElementById("showFahrenheit");
-var fahrenheitParagraph = document.getElementById("fahrenheit");
+let fahrenheitButton = document.getElementById(`fahrenheitButton`)
+let fahrenheitParagraph = document.getElementById(`fahrenheitParagraph`)
+let celsius = document.getElementById(`celsius`)
 
-showFahrenheitButton.addEventListener("click", showFahrenheit);
+fahrenheitButton.addEventListener(`click`, showFahrenheit)
 
 function showFahrenheit() {
-    var celsius = celsiusInput.value.trim();
+  let celsiusValue = celsius.value.trim()
 
-    if (celsius == "" || isNaN(celsius)) {
-        fahrenheitParagraph.innerHTML = "Please type a number.";
-    }
-    else {
-        var fahrenheit = 9 / 5 * parseInt(celsius, 10) + 32;
-        fahrenheitParagraph.innerHTML = parseInt(celsius, 10) + " degrees Celsius is " + parseInt(fahrenheit, 10) + " degrees Fahrenheit.";
-    }
+  if (celsiusValue == `` || isNaN(celsiusValue)) {
+    fahrenheitParagraph.innerHTML = `Please type a number.`
+  }
+  else {
+    let fahrenheitValue = (celsiusValue * 9 / 5) + 32
+    fahrenheitParagraph.innerHTML = `${celsiusValue} degrees Celsius is ${fahrenheitValue} degrees Fahrenheit.`
+  }
 }
