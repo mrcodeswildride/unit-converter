@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Unit Converter</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Unit Converter</h1>
 
-	</script>
-</head>
+    <input type="number" placeholder="feet" id="feet" />
+    <button id="inchesButton">Convert to inches</button>
+    <p id="inchesParagraph"></p>
 
-<body>
-	<h1>Unit Converter</h1>
+    <input type="number" placeholder="minutes" id="minutes" />
+    <button id="secondsButton">Convert to seconds</button>
+    <p id="secondsParagraph"></p>
 
-	<input type="number" placeholder="feet" id="feet">
-  <button id="inchesButton">Convert to inches</button>
-  <p id="inchesParagraph"></p>
-
-	<input type="number" placeholder="minutes" id="minutes">
-  <button id="secondsButton">Convert to seconds</button>
-  <p id="secondsParagraph"></p>
-
-	<input type="number" placeholder="Celsius" id="celsius">
-  <button id="fahrenheitButton">Convert to Fahrenheit</button>
-  <p id="fahrenheitParagraph"></p>
-</body>
-
+    <input type="number" placeholder="Celsius" id="celsius" />
+    <button id="fahrenheitButton">Convert to Fahrenheit</button>
+    <p id="fahrenheitParagraph"></p>
+  </body>
 </html>

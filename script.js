@@ -14,13 +14,14 @@ inchesButton.addEventListener(`click`, showInches)
 secondsButton.addEventListener(`click`, showSeconds)
 fahrenheitButton.addEventListener(`click`, showFahrenheit)
 
+feet.focus()
+
 function showInches() {
   let feetValue = feet.value.trim()
 
-  if (feetValue == `` || isNaN(feetValue)) {
-    inchesParagraph.innerHTML = `Please type a number.`
-  }
-  else {
+  if (feetValue == ``) {
+    inchesParagraph.innerHTML = `Type a number.`
+  } else {
     let inchesValue = feetValue * 12
     inchesParagraph.innerHTML = `${feetValue} feet is ${inchesValue} inches.`
   }
@@ -29,10 +30,9 @@ function showInches() {
 function showSeconds() {
   let minutesValue = minutes.value.trim()
 
-  if (minutesValue == `` || isNaN(minutesValue)) {
-    secondsParagraph.innerHTML = `Please type a number.`
-  }
-  else {
+  if (minutesValue == ``) {
+    secondsParagraph.innerHTML = `Type a number.`
+  } else {
     let secondsValue = minutesValue * 60
     secondsParagraph.innerHTML = `${minutesValue} minutes is ${secondsValue} seconds.`
   }
@@ -41,11 +41,10 @@ function showSeconds() {
 function showFahrenheit() {
   let celsiusValue = celsius.value.trim()
 
-  if (celsiusValue == `` || isNaN(celsiusValue)) {
-    fahrenheitParagraph.innerHTML = `Please type a number.`
-  }
-  else {
-    let fahrenheitValue = (celsiusValue * 9 / 5) + 32
+  if (celsiusValue == ``) {
+    fahrenheitParagraph.innerHTML = `Type a number.`
+  } else {
+    let fahrenheitValue = (celsiusValue * 9) / 5 + 32
     fahrenheitParagraph.innerHTML = `${celsiusValue} degrees Celsius is ${fahrenheitValue} degrees Fahrenheit.`
   }
 }
